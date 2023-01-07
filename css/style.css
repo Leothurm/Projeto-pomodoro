@@ -1,0 +1,44 @@
+*{
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-primary:#a54242;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-primary);
+    height: 100px;
+   
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.container-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    
+
+}
+
+.container-buttons i{
+    font-size: 25pt;
+
+}
