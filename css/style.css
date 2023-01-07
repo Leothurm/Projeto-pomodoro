@@ -22,6 +22,8 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 nav a{
@@ -41,4 +43,15 @@ nav a{
 .container-buttons i{
     font-size: 25pt;
 
+}
+
+.main-section{
+    height: 100px;
+}
+
+label{
+    color:white;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 15px 0;
 }

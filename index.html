@@ -19,19 +19,49 @@
     <header>
       <nav class="container">
          <a href="index.html">Timer Pomodoro</a>
-        <div class="container-buttons ml-auto">
+        <div class="container-buttons">
             <a> 
                 <i class="fa fa-pause text-white" aria-hidden="true"></i>
             </a>
             <a> 
                 <i class="fa fa-play text-white"  aria-hidden="true"></i>
             </a>
+            <audio src="./audio/lo-fi.mp3" type="audio/mpeg"></audio>
         </div>
       </nav>
     </header>
 
     <main>
-      <section>
+      <section class="main-section container">
+        <div class="row">
+            <div class="cold-md-8">
+                <div id="config" class="row">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="action">Ação</label>
+                                    <input type="number" class="form-control" id="acao">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="pause">Pause</label>
+                                    <input type="number" class="form-control" id="acao">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="sessions">sessões</label>
+                                    <input type="number" class="form-control" id="acao">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
       
       </section>
     </main>
