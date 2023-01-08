@@ -1,5 +1,4 @@
 *{
-   
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,7 +28,8 @@ nav{
 nav a{
     color: white;
     text-decoration: none;
-    font-size: 25px;
+    font-weight: 700;
+    font-size: 35px;
 }
 
 .container-buttons{
@@ -37,7 +37,6 @@ nav a{
     justify-content: space-between;
     width: 80px;
     
-
 }
 
 .container-buttons i{
@@ -49,9 +48,44 @@ nav a{
     height: 100px;
 }
 
+.LT-row-container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.LT-celula{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.LT-column-container input{
+    display: flex;
+    align-items: center;
+    width: 150px !important;
+    height: 150px !important;
+    font-size: 65px !important;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
 label{
     color:white;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 30px;
     padding: 15px 0;
+    text-align: center;
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: none;
 }
