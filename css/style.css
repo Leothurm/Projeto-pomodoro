@@ -47,6 +47,7 @@ nav a{
 
 .main-section{
     height: 100px;
+
 }
 
 .LT-row-container{
@@ -88,9 +89,6 @@ input[type="number"]::-webkit-inner-spin-button{
     margin: 0;
 }
 
-input[type="number"] {
-    -moz-appearance: none;
-}
 
 .button-container{
     display: flex;
@@ -106,10 +104,6 @@ input[type="number"] {
    
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
-.start-button button{
-
-}
-
 .start-button:hover{
     padding: 10px 0;
     background-color: var(--color-primary);
@@ -118,4 +112,18 @@ input[type="number"] {
     font-size: 20px;
     color: white;
     font-weight: 700;
+}
+.time{
+    color: white;
+    text-align: center; 
+    width: 20rem;
+    height: 20rem;
+    border-radius: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    font-size:100px;
 }
