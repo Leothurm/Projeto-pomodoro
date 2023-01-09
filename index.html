@@ -29,12 +29,22 @@
         <a href="index.html">Timer Pomodoro</a>
         <div class="container-buttons">
           <a>
-            <i class="fa fa-pause text-white" aria-hidden="true"></i>
+            <i
+              id="pause"
+              class="fa fa-pause text-white"
+              aria-hidden="true"
+              style="display: none"
+            ></i>
           </a>
           <a>
-            <i class="fa fa-play text-white" aria-hidden="true"></i>
+            <i
+              id="play"
+              class="fa fa-play text-white"
+              aria-hidden="true"
+              style="display: none"
+            ></i>
           </a>
-          <audio src="./audio/lo-fi.mp3" type="audio/mpeg"></audio>
+          <audio id="lofi" src="./audio/lo-fi.mp3" type="audio/mpeg"></audio>
         </div>
       </nav>
     </header>
@@ -54,6 +64,7 @@
                         class="form-control form-control-lg bg-dark border-0 text-white"
                         id="acao"
                       />
+                      <small class="text-danger" id="action_error"></small>
                     </div>
                   </div>
                   <div class="LT-column-container col-md-3">
@@ -62,8 +73,9 @@
                       <input
                         type="number"
                         class="form-control form-control-lg bg-dark border-0 text-white"
-                        id="acao"
+                        id="pausa"
                       />
+                      <small class="text-danger" id="pause_error"></small>
                     </div>
                   </div>
                   <div class="LT-column-container col-md-3">
@@ -72,14 +84,17 @@
                       <input
                         type="number"
                         class="form-control form-control-lg bg-dark border-0 text-white"
-                        id="acao"
+                        id="sessions"
                       />
+                      <small class="text-danger" id="sessions_error"></small>
                     </div>
                   </div>
                 </div>
                 <div class="row mt-4 mb-3">
                   <div class="button-container">
-                    <button class="start-button btn">Start</button>
+                    <button onclick="iniciar()" class="start-button btn">
+                      Start
+                    </button>
                   </div>
                 </div>
               </div>
