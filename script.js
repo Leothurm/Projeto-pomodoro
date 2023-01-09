@@ -52,10 +52,10 @@ function PLAY() {
 }
 
   let title = document.getElementById("title");
-  title.innerHTML = "ACAO";
+  title.innerHTML = "TIME TO FOCUS!";
   title.style.fontSize = "30px";
   title.style.fontWeight = "bold";
-  title.style.setProperty("color", "#FFF", "important");
+  title.style.setProperty("color", "#75ff75", "important");
 
   min = Number(localStorage.getItem("acao"));
   min -= 1;
