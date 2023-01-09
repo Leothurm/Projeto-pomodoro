@@ -114,7 +114,7 @@ input[type="number"]::-webkit-inner-spin-button{
     font-weight: 700;
 }
 .time{
-    color: white;
+    color: white !important;
     text-align: center; 
     width: 20rem;
     height: 20rem;
@@ -122,6 +122,9 @@ input[type="number"]::-webkit-inner-spin-button{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto !important;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px !important;
+
 }
 
 h2{
