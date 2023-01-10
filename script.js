@@ -14,25 +14,13 @@ var play = document.getElementById("play");
 
 function pausar(){
   lofi.pause()
-  play.style.setProperty('display','block','important')
-  pause.style.setProperty('display','none','important')
+
 }
 
 function executar(){
   lofi.play()
-  play.style.setProperty('display','none','important')
-  pause.style.setProperty('display','block','important')
 
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -52,6 +40,8 @@ function iniciar() {
   } else {
     lofi.play();
     pause.style.setProperty("display", "block", "important");
+    play.style.setProperty("display", "block", "important");
+    
 
     localStorage.setItem("acao", String(acao.value));
     localStorage.setItem("pausa", String(pausa.value));
@@ -146,7 +136,7 @@ function momentoPausa() {
       if (min_pausa <= 0) {
          ses = Number(localStorage.getItem('sessions'))
          ses -= 1
-         localStorage.setItem('sessoes', String(ses))
+         localStorage.setItem('sessions', String(ses))
          clearInterval(min_interval)
          clearInterval(seg_interval)
 

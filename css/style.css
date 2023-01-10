@@ -39,6 +39,10 @@ nav a{
     width: 80px;
     
 }
+.container-buttons a:hover{
+    cursor: pointer;
+    
+}
 
 .container-buttons i{
     font-size: 25pt;
