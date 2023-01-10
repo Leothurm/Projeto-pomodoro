@@ -11,6 +11,32 @@ var lofi = document.getElementById("lofi");
 var pause = document.getElementById("pause");
 var play = document.getElementById("play");
 
+
+function pausar(){
+  lofi.pause()
+  play.style.setProperty('display','block','important')
+  pause.style.setProperty('display','none','important')
+}
+
+function executar(){
+  lofi.play()
+  play.style.setProperty('display','none','important')
+  pause.style.setProperty('display','block','important')
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 function iniciar() {
   if (acao.value == 0) {
     document.getElementById("action_error").innerHTML = "Adicione os minutos";

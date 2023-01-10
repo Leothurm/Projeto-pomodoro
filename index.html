@@ -28,20 +28,20 @@
       <nav class="container">
         <a href="index.html">Timer Pomodoro</a>
         <div class="container-buttons">
-          <a>
+          <a onclick="pausar()">
             <i
               id="pause"
-              class="fa fa-pause text-white"
-              aria-hidden="true"
+              class="fa fa-volume-off"
               style="display: none"
+              aria-hidden="true"
             ></i>
           </a>
-          <a>
+          <a onclick="executar()">
             <i
               id="play"
-              class="fa fa-play text-white"
-              aria-hidden="true"
+              class="fa fa-volume-up"
               style="display: none"
+              aria-hidden="true"
             ></i>
           </a>
           <audio id="lofi" src="./audio/lo-fi.mp3" type="audio/mpeg"></audio>
@@ -129,9 +129,7 @@
             </h1>
             <div class="row mt-5 mb-5 d-flex justify-content-center">
               <div class="col-md-9 d-flex justify-content-center">
-                <a href="./index.html" class="btn btn-danger btn-lg"
-                  >Inicio</a
-                >
+                <a href="./index.html" class="btn btn-danger btn-lg">Inicio</a>
               </div>
             </div>
           </div>
