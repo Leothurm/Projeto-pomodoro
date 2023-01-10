@@ -3,27 +3,21 @@ let pausa = document.getElementById("pausa");
 let sessions = document.getElementById("sessions");
 let segundos;
 
-var bell = new Audio("./audio/bell.mp3");
-var volta = new Audio("./audio/volta.mp3");
-var final = new Audio("./audio/final.mp3");
+var bell = new Audio("./audio/audio_bell.mp3");
+var volta = new Audio("./audio/audio_volta.mp3");
+var final = new Audio("./audio/audio_final.mp3");
 
 var lofi = document.getElementById("lofi");
 var pause = document.getElementById("pause");
 var play = document.getElementById("play");
 
-
-function pausar(){
-  lofi.pause()
-
+function pausar() {
+  lofi.pause();
 }
 
-function executar(){
-  lofi.play()
-
+function executar() {
+  lofi.play();
 }
-
-
-
 
 function iniciar() {
   if (acao.value == 0) {
@@ -41,7 +35,6 @@ function iniciar() {
     lofi.play();
     pause.style.setProperty("display", "block", "important");
     play.style.setProperty("display", "block", "important");
-    
 
     localStorage.setItem("acao", String(acao.value));
     localStorage.setItem("pausa", String(pausa.value));
@@ -54,7 +47,7 @@ function iniciar() {
       .getElementById("timer")
       .style.setProperty("display", "block", "important");
 
-      PLAY()
+    PLAY();
   }
 }
 
@@ -62,10 +55,12 @@ function PLAY() {
   let valueSessions = localStorage.getItem("sessions");
 
   if (valueSessions != "1") {
-    document.getElementById('title_sessao').innerHTML = sessions.value + ' sessões restantes'
-} else {
-    document.getElementById('title_sessao').innerHTML = sessions.value + ' sessão restante'
-}
+    document.getElementById("title_sessao").innerHTML =
+      sessions.value + " sessões restantes";
+  } else {
+    document.getElementById("title_sessao").innerHTML =
+      sessions.value + " sessão restante";
+  }
 
   let title = document.getElementById("title");
   title.innerHTML = "TIME TO FOCUS!";
@@ -98,7 +93,6 @@ function PLAY() {
         clearInterval(seg_interval);
 
         bell.play();
-
         momentoPausa();
       }
       segundos = 60;
@@ -117,43 +111,60 @@ function momentoPausa() {
   min_pausa -= 1;
   segundos = 59;
 
-  document.getElementById('minutes_ok').innerHTML = min_pausa
-  document.getElementById('seconds_ok').innerHTML = segundos
+  document.getElementById("minutes_ok").innerHTML = min_pausa;
+  document.getElementById("seconds_ok").innerHTML = segundos;
 
-  var min_interval = setInterval(minTimer, 60000)
-  var seg_interval = setInterval(segTimer, 1000)
+  var min_interval = setInterval(minTimer, 60000);
+  var seg_interval = setInterval(segTimer, 1000);
 
   function minTimer() {
-    min_pausa -= 1
-    document.getElementById('minutes_ok').innerHTML = min_pausa
- }
+    min_pausa -= 1;
+    document.getElementById("minutes_ok").innerHTML = min_pausa;
+  }
 
- function segTimer(){
-    segundos = segundos - 1
-   document.getElementById('seconds_ok').innerHTML = segundos
+  function segTimer() {
+    segundos = segundos - 1;
+    document.getElementById("seconds_ok").innerHTML = segundos;
 
-   if (segundos <= 0) {
+    if (segundos <= 0) {
       if (min_pausa <= 0) {
-         ses = Number(localStorage.getItem('sessions'))
-         ses -= 1
-         localStorage.setItem('sessions', String(ses))
-         clearInterval(min_interval)
-         clearInterval(seg_interval)
+        ses = Number(localStorage.getItem("sessions"));
+        ses = ses - 1
+        localStorage.setItem("sessions", String(ses));
+        clearInterval(min_interval);
+        clearInterval(seg_interval);
 
-         if (ses <= 0) {
-            final.play()
-            localStorage.clear()
+        if (ses <= 0) {
+          final.play();
+          localStorage.clear();
 
-            document.getElementById('config').style.setProperty('display', 'none', 'important')
-            document.getElementById('timer').style.setProperty('display', 'none', 'important')
-            document.getElementById('fim').style.setProperty('display', 'block', 'important')
-         } else {
-            volta.play();
-            PLAY()
+          document
+            .getElementById("config")
+            .style.setProperty("display", "none", "important");
+          document
+            .getElementById("timer")
+            .style.setProperty("display", "none", "important");
+          document
+            .getElementById("fim")
+            .style.setProperty("display", "block", "important");
+        } else {
+          volta.play();
+          PLAY();
+
+
+
+       
+
+          if (ses != "1") {
+            document.getElementById("title_sessao").innerHTML =
+              ses + " sessões restantes";
+          } else {
+            document.getElementById("title_sessao").innerHTML =
+              ses + " sessão restante";
+          }
         }
+      }
+      segundos = 60;
     }
-    segundos = 60
- }
-}
-
+  }
 }
