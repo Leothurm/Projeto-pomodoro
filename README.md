@@ -1,5 +1,5 @@
 # Projeto pomodoro 🍅
->### Status: Finished ⚠️
+>### Status: Finished ✔️
 
 ---
 
