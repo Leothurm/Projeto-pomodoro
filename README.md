@@ -1,5 +1,5 @@
 # Projeto pomodoro 🍅
->### Status: Working ⚠️
+>### Status: Finished ⚠️
 
 ---
 
@@ -16,3 +16,5 @@ O aplicativo é baseado na técnica pomodoro e foi feito seguindo uma boa organi
 >* BootStrap
 
 ---
+![pomodoro1](https://user-images.githubusercontent.com/117363117/212572645-287e74f8-8064-409a-9838-98a3bd149818.PNG)
+![pomodoro2](https://user-images.githubusercontent.com/117363117/212572647-2fde2cac-0310-47c9-81c3-dadd988be4b9.PNG)
